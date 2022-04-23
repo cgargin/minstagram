@@ -150,6 +150,7 @@ export default defineComponent({
       this.imageCaptured = true;
       this.post.photo = this.dataURItoBlob(canvas.toDataURL());
       this.disableCamera();
+      console.log(`${process.env.API}/createPost`);
     },
     captureImageFallback(file) {
       this.post.photo = file;
@@ -244,7 +245,7 @@ export default defineComponent({
       formData.append("location", this.post.location);
       formData.append("date", this.post.date);
       formData.append("file", this.post.photo, this.post.id + ".png");
-
+      console.log(`${process.env.API}/createPost`);
       this.$axios
         .post(`${process.env.API}/createPost`, formData)
         .then((response) => {
