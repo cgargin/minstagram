@@ -12,7 +12,7 @@ const app = express();
 
 /* Config firebase */
 
-const serviceAccount = require("./serviceAccountKey.json");
+const serviceAccount = require("./sak.json");
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   storageBucket: "minstagram-9ad16.appspot.com",

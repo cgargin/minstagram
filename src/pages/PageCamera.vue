@@ -1,7 +1,13 @@
 <template>
   <q-page class="constrain-more q-pa-md">
     <div class="camera-frame q-pa-md">
-      <video class="full-width" ref="video" autoplay v-show="!imageCaptured" />
+      <video
+        playsinline
+        class="full-width"
+        ref="video"
+        autoplay
+        v-show="!imageCaptured"
+      />
       <!-- playsinline  --- ios için gerekli dedi -->
       <canvas
         ref="canvas"
